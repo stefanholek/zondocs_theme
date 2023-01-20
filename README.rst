@@ -6,7 +6,7 @@ New shiny Sphinx Theme for ZEIT ONLINE
 Usage
 =====
 
-Install the package, e.g. ``pip install zondocsn_theme``, and then set
+Install the package, e.g. ``pip install zondocs_theme``, and then set
 ``html_theme = 'zondocs_theme'`` in your Sphinx ``conf.py``.
 
 
