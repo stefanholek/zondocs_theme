@@ -818,7 +818,7 @@ div.highlight span.linenos {
   border-radius: 4px;
   font-size: 80%;
   font-weight: 700;
-  padding: 2.4px 6px;
+  padding: 2px 6px;
   margin: auto 2px;
 }
 
@@ -831,7 +831,7 @@ div.highlight span.linenos {
   color: #000;
   font-size: 80%;
   margin: auto 0;
-  padding: 2.4px 6px;
+  padding: 2px 6px;
   vertical-align: text-top;
 }
 
