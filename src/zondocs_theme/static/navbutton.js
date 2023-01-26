@@ -1,9 +1,21 @@
-(() => {
-  const button = document.querySelector('#navbutton');
-  const sidebar = document.querySelector('#sidebar');
-  button.addEventListener('click', ( event ) => {
-      let expanded = this.getAttribute('aria-expanded') === 'true' || false;
-      this.setAttribute('aria-expanded', !expanded);
-      sidebar.classList.toggle('opened');
-  });
+( () => {
+    const button = document.querySelector( '#navbutton' );
+    const sidebar = document.querySelector( '#sidebar' );
+    const mediaQueryList = window.matchMedia( '(min-width: 51.01em)' );
+    button.addEventListener( 'click', () => {
+        let expanded = button.getAttribute( 'aria-expanded' ) === 'true' || false;
+        button.setAttribute( 'aria-expanded', !expanded );
+        sidebar.classList.toggle( 'opened' );
+    });
+    mediaQueryList.addListener( ( mql ) => {
+        if ( mql.matches ) {
+            console.log( 'matches' );
+            sidebar.classList.add( 'opened' );
+            button.setAttribute( 'aria-expanded', true );
+        } else {
+            console.log( 'does not match' );
+            sidebar.classList.remove( 'opened' );
+            button.setAttribute( 'aria-expanded', false );
+        }
+    });
 })();
