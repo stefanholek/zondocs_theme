@@ -9,11 +9,9 @@
     });
     mediaQueryList.addListener( ( mql ) => {
         if ( mql.matches ) {
-            console.log( 'matches' );
             sidebar.classList.add( 'opened' );
             button.setAttribute( 'aria-expanded', true );
         } else {
-            console.log( 'does not match' );
             sidebar.classList.remove( 'opened' );
             button.setAttribute( 'aria-expanded', false );
         }
