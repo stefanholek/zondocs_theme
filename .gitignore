@@ -1,0 +1,6 @@
+.venv
+.vscode
+dist
+build
+src/zondocs_theme.egg-info/
+.DS_Store
