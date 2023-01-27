@@ -13,7 +13,7 @@ def project_path(*names):
 
 setup(
     name='zondocs_theme',
-    version='1.0.1.dev0',
+    version='1.0.1',
 
     setup_requires=['setuptools_git'],
 
