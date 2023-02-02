@@ -4,14 +4,14 @@ New shiny Sphinx Theme for ZEIT ONLINE
 
 
 Usage
-=====
+-----
 
 Install the package, e.g. ``pip install zondocs_theme``, and then set
 ``html_theme = 'zondocs_theme'`` in your Sphinx ``conf.py``.
 
 
 Features
-========
+--------
 
 * Automatically uses the ZON logo.
 * Adds an "edit this page" link to the sidebar. To customize how this link is
