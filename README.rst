@@ -25,3 +25,12 @@ Features
   (This is the default value, it supports two variables, ``project`` is taken
    directly from ``conf.py``, and ``page`` evaluates to
    ``path/to/current/page.suffix``)
+
+
+Release process
+---------------
+
+.. note::
+   `pipenv` is needed to run the release process
+
+To release the package it should be enough to run `bin/release`.
