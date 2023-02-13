@@ -15,8 +15,6 @@ setup(
     name='zondocs_theme',
     version='1.0.2',
 
-    setup_requires=['setuptools_git'],
-
     install_requires=[
         'setuptools',
     ],
