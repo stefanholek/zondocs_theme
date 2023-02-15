@@ -55,6 +55,12 @@
     {%- endif %}
   {%- endblock %}
 
+  {% set script_files = script_files + ['_static/searchtools.js', '_static/language_data.js'] %}
+  {%- for scriptfile in script_files %}
+      {{ js_tag(scriptfile) }}
+    {%- endfor %}
+
+
   {%- block extrahead %} {% endblock %}
   </head>
   <body>
@@ -122,6 +128,7 @@
         {% include "footer.html" %}
       </div>
     </div>
+
     <script src="{{ pathto('_static/navigation.js', 1) }}"></script>
     <script src="{{ pathto('_static/navbutton.js', 1) }}"></script>
     <script src="{{ pathto('_static/builddate.js', 1) }}"></script>
