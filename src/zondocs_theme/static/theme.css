@@ -880,7 +880,7 @@ dl.footnote > dd {
 
 /* API */
 dl > dd {
-  margin: 20px 0;
+  margin-left: 30px;
 }
 
 dl > dd dd {
