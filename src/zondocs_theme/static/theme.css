@@ -905,6 +905,7 @@ dt.sig {
 
 .field-list dt,
 .field-list dd {
+  margin: 0;
   padding: 10px;
 }
 
