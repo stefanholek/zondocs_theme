@@ -48,3 +48,5 @@ For a offical release run
 .. code-block:: text
 
     $ bin/release prod
+    
+Tag project and update our `Dockerfile <https://github.com/ZeitOnline/docs/blob/main/Dockerfile>`_.
