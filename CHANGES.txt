@@ -2,10 +2,12 @@
 CHANGES
 =======
 
-1.0.7 (unreleased)
+1.0.7 (2023-04-05)
 ------------------
 
-- Nothing changed yet.
+- Definition lists need some margin
+- Block quotes with better layout
+- Fix: Layout of field lists
 
 
 1.0.6 (2023-02-15)
