@@ -6,9 +6,12 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 cd $DIR
 if [[ Pipfile.lock -nt .pipenv.success ]]; then
+    pipenv clean
     pipenv sync
     touch .pipenv.success
 fi
+export PIPENV_PIPFILE=$DIR/Pipfile
+
 cd ..
 
 if [[ -e "$VAULT_TOKEN" ]]; then
@@ -17,7 +20,21 @@ fi
 
 password=$(curl -s -H "X-Vault-Token: $(vault print token)" https://vault.ops.zeit.de/v1/zon/v1/pypi/zon-backend | sed -e 's+^.*"password":"\([^"]*\).*$+\1+')
 
-env PIPENV_PIPFILE="$DIR/Pipfile" \
-    TWINE_USERNAME="zon-backend" \
-    TWINE_PASSWORD="$password" \
-    pipenv run fullrelease "$@"
+export PIPENV_PIPFILE="$DIR/Pipfile"
+export TWINE_USERNAME="zon-backend"
+export TWINE_PASSWORD="$password"
+
+pipenv run python -m build
+COMMAND=${1:-test}
+case $COMMAND in
+    test)
+        exec pipenv run twine upload -r testpypi dist/*
+    ;;
+    prod)
+        exec pipenv run twine upload dist/*
+    ;;
+    *)
+        echo "Unrecognized command: $COMMAND"
+        exit 1
+    ;;
+esac

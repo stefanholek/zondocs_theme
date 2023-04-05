@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 "zest.releaser" = "*"
 twine = "*"
+build = "*"
 
 [requires]
 python_version = "3"

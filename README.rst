@@ -2,13 +2,16 @@
 New shiny Sphinx Theme for ZEIT ONLINE
 ======================================
 
-
 Usage
 -----
 
-Install the package, e.g. ``pip install zondocs_theme``, and then set
-``html_theme = 'zondocs_theme'`` in your Sphinx ``conf.py``.
+Install the package
 
+.. code-block:: text
+
+    $ pip install zondocs_theme
+
+Then set ``html_theme = 'zondocs_theme'`` in your Sphinx ``conf.py``.
 
 Features
 --------
@@ -30,6 +33,18 @@ Features
 Release process
 ---------------
 
-`pipenv` is needed to run the release process
+`pipenv` is needed to run the release process.
 
-To release the package it should be enough to run `bin/release`.
+Update the version in ``pyproject.toml``.
+
+For a `test <https://test.pypi.org/project/zondocs-theme/>`_ release run
+
+.. code-block:: text
+
+    $ bin/release test
+
+For a offical release run
+
+.. code-block:: text
+
+    $ bin/release prod
