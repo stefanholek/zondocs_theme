@@ -30,7 +30,6 @@ Features
 Release process
 ---------------
 
-.. note::
-   `pipenv` is needed to run the release process
+`pipenv` is needed to run the release process
 
 To release the package it should be enough to run `bin/release`.
