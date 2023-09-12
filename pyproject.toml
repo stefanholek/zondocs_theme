@@ -1,7 +1,7 @@
 [project]
 name = "zondocs_theme"
 description = "Sphinx theme for ZEIT ONLINE docs"
-version='1.0.7'
+version='1.0.8.dev0'
 readme = "README.rst"
 license = {text = "MIT"}
 maintainers = [{name = "Nico Bruenjes", email = "nico.bruenjes@zeit.de"}]
