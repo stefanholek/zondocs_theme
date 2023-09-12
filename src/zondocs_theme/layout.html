@@ -84,12 +84,12 @@
         <div class="prev-next-navigation">
             <nav>
                 {% if prev -%}
-                <a class="linkbutton prevnext" href="{{ prev.link|e }}" title="{{ prev.title }}">Vorige Seite</a>
+                <a class="linkbutton prevnext" href="{{ prev.link|e }}" title="{{ prev.title|striptags|e }}">Vorige Seite</a>
                 {% else -%}
                 <span>&nbsp;</span>
                 {% endif -%}
                 {% if next -%}
-                <a href="{{ next.link|e }}" class="linkbutton prevnext" title="{{ next.title }}">Nächste Seite</a>
+                <a href="{{ next.link|e }}" class="linkbutton prevnext" title="{{ next.title|striptags|e }}">Nächste Seite</a>
                 {% else -%}
                 <span>&nbsp;</span>
                 {% endif -%}
